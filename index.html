@@ -659,6 +659,7 @@
   }
 
   function calcConversion(mode) {
+    if (typeof gtag === "function") { gtag("event", "calculator_submit", {calculator_name: "conversion_rate_calculator", page_title: document.title}); }
     let visitors, conversions, visLabel, convLabel;
 
     if (mode === 'lp') {
